@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#grid-container {
+    background-color: red;
+    width: 90vw;
+    height: 90vw;
+    padding: 0px;
+    margin: 3vw auto;
+}
