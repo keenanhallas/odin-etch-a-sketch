@@ -5,11 +5,15 @@ body {
 }
 
 #grid-container {
-    background-color: red;
     width: 90vw;
     height: 90vw;
     padding: 0px;
     margin: 3vw auto;
     display: flex;
     flex-wrap: wrap;
+}
+
+.drawn {
+    background-color: black;
+    border: none;
 }
