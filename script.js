@@ -1,18 +1,30 @@
 let gridContainer = document.querySelector("#grid-container");
 gridContainer.addEventListener("mouseover", setDrawn);
+let startButton = document.querySelector("#start-btn");
+startButton.addEventListener("click", () => {
+    let size = prompt("Pick a number 100 or less for your canvas grid size:");
+    generateGrid(size);
+});
 
 let hoveredCell;
 
 function setDrawn(event){
+    if(event.target.id === "grid-container"){
+        return;
+    }
+
     hoveredCell = document.querySelector(`#${event.target.id}`);
     hoveredCell.classList.add("drawn");
 }
 
 function generateGrid(size){
+    gridContainer.textContent = "";
+
     if(size > 100){
         alert("You must pick a size no larger than 100.");
         return;
     }
+
     let totalCells = size * size;
     for(i = 1; i <= totalCells; i++){
         let newCell = document.createElement("div");
@@ -21,5 +33,3 @@ function generateGrid(size){
         gridContainer.appendChild(newCell);
     }
 }
-
-generateGrid(100);
