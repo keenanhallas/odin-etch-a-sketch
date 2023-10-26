@@ -10,4 +10,6 @@ body {
     height: 90vw;
     padding: 0px;
     margin: 3vw auto;
+    display: flex;
+    flex-wrap: wrap;
 }
