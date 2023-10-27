@@ -28,7 +28,7 @@ function generateGrid(size){
     let totalCells = size * size;
     for(i = 1; i <= totalCells; i++){
         let newCell = document.createElement("div");
-        newCell.setAttribute("style", `color: white; border: 1px solid grey; margin: 0px; padding; 0px; box-sizing: border-box; width: ${100/size}%; height: ${100/size}%; flex: 0 0 auto;`);
+        newCell.setAttribute("style", `color: white; border: 1px solid lightgrey; margin: 0px; padding; 0px; box-sizing: border-box; width: ${100/size}%; height: ${100/size}%; flex: 0 0 auto;`);
         newCell.setAttribute("id", `cell-${i}`);
         gridContainer.appendChild(newCell);
     }
